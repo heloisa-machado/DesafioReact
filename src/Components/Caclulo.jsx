@@ -14,8 +14,6 @@ const Calculo = ({ a, b }) => {
 
   return (
     <div>
-      <p>A: {a}</p>
-      <p>B: {b}</p>
       <button onClick={handleSomar}>Somar!</button>
       <button onClick={handleSubtrair}>Subtrair!</button>
       <button onClick={handleMultiplicar}>Multiplicar!</button>
