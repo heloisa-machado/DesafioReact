@@ -12,7 +12,9 @@ import Calculo from './Components/Caclulo'
 
 function App() {
   const [count, setCount] = useState(0)
-  const [num1, num2] = useState(0)
+  const [num1, setNum1] = useState(0)
+  const [num2, setNum2] = useState(0)
+
 
   return (
     <>
@@ -28,8 +30,16 @@ function App() {
         <FinalChallenge x={6} y={3} />
         <FinalChallenge x={5} y={4} />
         <h6>Digite um número:</h6> 
-        <input type="number" id='num1in' />
-        <input type="number" id='num2in'/> 
+        <input 
+          type="number" 
+          value={num1} 
+          onChange={(e) => setNum1(Number(e.target.value))}
+        />
+        <input 
+          type="number" 
+          value={num2} 
+          onChange={(e) => setNum2(Number(e.target.value))}
+        />
         <Calculo a={num1} b={num2} />
       </div>
     </>
